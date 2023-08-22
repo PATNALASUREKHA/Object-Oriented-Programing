@@ -1,6 +1,5 @@
 #include<iostream>
 using namespace std;
-//22A91A05F3
 class Rectangle{
 	private:
 		int length;
@@ -11,14 +10,20 @@ class Rectangle{
 			this->length = l;
 			this->breadth = b;
 		}
-		void display();
+		void mod()
+		{
+			length = 5;
+			breadth = 6;
+		}
+		int rectangle()
+		{
+			return length*breadth;
+		}
 };
-void Rectangle::display(){
-	cout<<length*breadth<<endl;
-}
 int main()
 {
 	Rectangle r1(2,3);
-	r1.display();
+	r1.mod();
+	cout<<r1.rectangle();
 	return 0;
 }
